@@ -1,8 +1,16 @@
+import Repo from "@/app/components/Repo"
+import RepoDirs from "@/app/components/RepoDirs"
+import Link from "next/link"
+
 const RepoPage = ({ params: { name } }) => {
   return (
     <div className="card">
-      <h2>{name}</h2>
-      <p>Repo details</p>
+      <Link href="/code/repos" className="btn btn-back">
+        Back to Repositories
+      </Link>
+      {/* pass the name which comes from the URL to the Repo component */}
+      <Repo name={name} />
+      <RepoDirs name={name} />
     </div>
   )
 }
