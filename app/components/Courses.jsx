@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 // recieve courses prop from the Courses component in the HomePage component
 const Courses = ({courses}) => {
-  // const courses = await fetchCourses();
   return (
     <div className='courses'>
       {courses.map((course) => (
